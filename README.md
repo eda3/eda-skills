@@ -41,7 +41,7 @@ Claude Code 上で以下を実行する。
   - 標準的なテキスト処理系コマンド: `grep`、`sed`、`awk`、`cut`、`sort`、`uniq`、`comm`、`paste`、`wc`、`cat`、`tr`、`tee`、`date`、`mkdir`、`ls`
     （`inventory.sh`・`make_batches.sh`・`check_read.sh`・`check_plan.sh`・`count_res.sh`・`assemble.sh`・`check_html.sh` の全体で使用。`comm` は `check_plan.sh` 49行目・78行目、`check_html.sh` 46行目で、`paste` は `count_res.sh` 24行目、`check_plan.sh` 50・79行目で使用）
   - `jq`・`rg`（ripgrep）・`curl` は、上記スクリプト内では確認できなかった（未使用）。
-- Claude Code 側では、工程2（読了）・工程4（執筆）・工程6（レビュー）でサブエージェントを並列起動する（読了・執筆は同時最大6体）。
+- Claude Code 側では、工程2（読了）・工程4（執筆）・工程6（レビュー）でサブエージェントを並列起動する（読了・執筆は同時最大20体。Claude Code の既定値）。
 
 ## 出力について
 
