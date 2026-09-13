@@ -6,7 +6,7 @@ description: >-
   トリガー例:「このリポジトリをなんJスレにして」「なんJ形式で全部解説して」
   「/repo-nanj-thread」「repo-nanj-threadで読んで」。リポジトリ全体をスレ化したい文脈なら
   明示的にスキル名を呼ばれなくても使ってよい。
-  次の場合は使わない: 通常の技術ドキュメントが欲しいとき（repo-docを使う）、
+  次の場合は使わない: 通常の技術ドキュメントが欲しいとき、
   単一ファイルへの質問、リポジトリURLだけ渡されて手元にcloneがないとき（先にcloneを促す）。
 ---
 
@@ -27,7 +27,9 @@ description: >-
 ## 工程0: 準備
 
 - `SKILL_DIR` = この SKILL.md があるディレクトリの絶対パス。一度だけ解決し、以後使い回す。
-  不明なら `ls -d ~/.claude/skills/repo-nanj-thread .claude/skills/repo-nanj-thread 2>/dev/null` で確認。
+  まず `${CLAUDE_SKILL_DIR}` を使う（Claude Code が読み込み時に実パスへ置換する値）。
+  上の値がパスではなくドル記号付きの変数名のまま見える場合は、
+  `ls -d ~/.claude/plugins/cache/*/repo-nanj-thread/*/skills/repo-nanj-thread ~/.claude/skills/repo-nanj-thread .claude/skills/repo-nanj-thread 2>/dev/null` で確認。
 - カレントがリポジトリのルートであることを確認（`ls` に README や src 等が見えるか）。
   違うディレクトリ・cloneがない場合は中断して報告する。
 - スクリプトは各コードブロックのとおり `bash` で呼ぶ（here-string や `${var//}` 置換など bash 固有の構文を使うため）。
