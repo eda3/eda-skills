@@ -1,0 +1,16 @@
+{
+  "name": "eda-skills",
+  "description": "えだが自作したClaude Code用スキル集",
+  "owner": {
+    "name": "えだ",
+    "url": "https://github.com/eda3"
+  },
+  "plugins": [
+    {
+      "name": "repo-nanj-thread",
+      "source": "./plugins/repo-nanj-thread",
+      "description": "リポジトリ全ファイルをサブエージェントで読み切り、初心者向けインフォグラフィックHTMLをなんJスレ形式で出力する",
+      "repository": "https://github.com/eda3/eda-skills"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "name": "repo-nanj-thread",
+  "description": "リポジトリ全ファイルをサブエージェントで読み切り、初心者向けインフォグラフィックHTMLをなんJスレ形式で出力する",
+  "author": { "name": "えだ" }
+}
