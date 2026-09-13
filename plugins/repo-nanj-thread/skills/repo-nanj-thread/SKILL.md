@@ -57,8 +57,7 @@ bash "$SKILL_DIR/scripts/check_read.sh" "$OUT"
 ```
 
 - `READ_MISSING` なら `$OUT/batches/retry.tsv` を1バッチとして読了エージェントを再投入
-  （記録先は read/retry1.jsonl 等の新規ファイル）。READ_OK になるまで繰り返す（最大3周。
-  3周しても unreadable が残る場合は、そのファイルの status=unreadable 記録があることを確認して先へ進む）。
+  （記録先は read/retry1.jsonl 等の新規ファイル）。READ_OK になるまで繰り返す（最大3周。直らなければ未読了のパスを添えて中断報告）。
 
 ## 工程3: 構成計画
 
