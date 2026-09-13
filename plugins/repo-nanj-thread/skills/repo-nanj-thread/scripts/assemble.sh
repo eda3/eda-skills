@@ -3,7 +3,7 @@
 # 使い方: bash assemble.sh <OUT> <SKILL_DIR>
 # assets/template.html の {{KEY}} を summary.txt・plan・実測レス数で置換し、
 # <!-- TOC --> に blocks.tsv から作った目次、<!-- PARTS --> に parts/*.html を挿入する。
-# 数値はすべて計測値を使う（目視の概算を書かない）。標準出力の最終行 = 最終HTMLの絶対パス。
+# 数値はすべて計測値を使う。標準出力の最終行 = 最終HTMLの絶対パス。
 set -euo pipefail
 OUT="${1:?usage: assemble.sh OUT SKILL_DIR}"
 SKILL_DIR="${2:?usage: assemble.sh OUT SKILL_DIR}"

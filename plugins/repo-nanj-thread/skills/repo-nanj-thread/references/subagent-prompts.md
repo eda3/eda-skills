@@ -40,14 +40,14 @@
 <constraints>
 - 出力は {OUT}/plan/ 配下の3ファイルのみ。
 - blocks.tsv: block(01〜) <TAB> start <TAB> end <TAB> theme。ヘッダ行なし。
-  8〜12ブロック、各70〜130レス、start は 1 から連番、合計900〜1000。
+  8〜12ブロック、各70〜130レス を推奨（範囲外は check_plan.sh が WARN で知らせる）。start は 1 から連番。合計900〜1000（下の自己チェックで判定）。
   構成順は「読者が理解しやすい順」（全体像→入口→中核→周辺→運用→総まとめ）。
 - assign.tsv: path <TAB> block <TAB> mode。inventory.tsv の全パスをどこかのブロックに載せる。
   自動生成などで束にして扱うディレクトリは、ディレクトリパス1行 mode=dir で代表させてよい
   （そのディレクトリ名は本文に必ず登場させる前提になる）。それ以外は mode=file。
 - plan.md: 1行目に「title: <スレタイ>」。スレタイは【朗報】等の定番プレフィックス+リポジトリ名入り。
   続けて、各ブロックの狙い1〜2文、ブロック先頭レス番号の一覧、笑いどころにできそうな gotchas の候補を書く。
-- 書き終えたら bash {SKILL_DIR}/scripts/check_plan.sh {OUT} を実行し、RESULT PASS まで自分で直す。
+- 書き終えたら bash {SKILL_DIR}/scripts/check_plan.sh {OUT} 900 1000 を実行し、RESULT PASS まで自分で直す。
 </constraints>
 ```
 

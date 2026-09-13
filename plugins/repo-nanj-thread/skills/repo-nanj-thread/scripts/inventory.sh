@@ -6,7 +6,7 @@
 #       $OUT/excluded.txt   (path <TAB> 除外理由)
 #       $OUT/summary.txt    (key=value)
 #       標準出力の最終行 = OUT の絶対パス（以降の全工程でこの値を使い回す）
-# 除外の判断はこのスクリプトが行う。除外済みファイルを後工程で追加で読まない。
+# 除外の判断はこのスクリプトが行う。
 set -euo pipefail
 
 ROOT="$(pwd -P)"
@@ -107,7 +107,7 @@ LASTC="-"
 } > "$OUT/summary.txt"
 
 if [ "$TOTAL" -eq 0 ]; then
-  echo "ERROR: 対象ファイルが 0 件（excluded=$EXCL）。中断してユーザーに報告すること。" >&2
+  echo "ERROR: 対象ファイルが 0 件（excluded=$EXCL）。" >&2
   echo "$OUT"
   exit 2
 fi

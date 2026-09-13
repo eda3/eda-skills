@@ -64,7 +64,7 @@ bash "$SKILL_DIR/scripts/check_read.sh" "$OUT"
 - 完了後に自分でも検算する:
 
 ```bash
-bash "$SKILL_DIR/scripts/check_plan.sh" "$OUT"
+bash "$SKILL_DIR/scripts/check_plan.sh" "$OUT" 900 1000   # 第2・3引数がレス数の下限・上限
 ```
 
 - RESULT FAIL なら FAIL 行を添えて計画エージェントに差し戻す（最大3回。直らなければ中断して報告）。
@@ -86,7 +86,7 @@ bash "$SKILL_DIR/scripts/assemble.sh" "$OUT" "$SKILL_DIR"   # 最終行が最終
 ## 工程6: 検証とレビュー
 
 ```bash
-bash "$SKILL_DIR/scripts/check_html.sh" "$OUT" "$SKILL_DIR"
+bash "$SKILL_DIR/scripts/check_html.sh" "$OUT" "$SKILL_DIR" "" 900 1000   # 第3引数は HTML パス（空なら既定）。第4・5引数は工程3と同じ下限・上限
 ```
 
 - RESULT FAIL の項目は該当ブロックを特定し、新しい執筆エージェントを起動し、元の parts/NN.html と FAIL 行を渡して書き直させ、
