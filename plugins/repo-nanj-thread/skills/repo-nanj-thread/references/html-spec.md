@@ -71,10 +71,3 @@ part ファイルには **HTML 断片だけ** を書く。
 <div class="ig ig-callout"><div class="ig-title">初心者向けポイント</div>
 リポジトリは上から順に読まなくてええんやで。入口（main）から呼ばれる順に追うんや</div>
 ```
-
-## 自己チェック（執筆後に必ず実行）
-
-```bash
-bash "$SKILL_DIR/scripts/count_res.sh" "$OUT/parts/NN.html" <start> <end>
-```
-`RESULT OK` が出るまで直す（最大3回）。NG 理由は出力に日本語で書いてある。

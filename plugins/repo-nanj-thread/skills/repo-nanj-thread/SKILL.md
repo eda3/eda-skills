@@ -30,7 +30,7 @@ description: >-
   不明なら `ls -d ~/.claude/skills/repo-nanj-thread .claude/skills/repo-nanj-thread 2>/dev/null` で確認。
 - カレントがリポジトリのルートであることを確認（`ls` に README や src 等が見えるか）。
   違うディレクトリ・cloneがない場合は中断して報告する。
-- 以降のスクリプトは必ず `bash` で呼ぶ（`sh` 不可）。
+- スクリプトは各コードブロックのとおり `bash` で呼ぶ（here-string や `${var//}` 置換など bash 固有の構文を使うため）。
 
 ## 工程1: 棚卸し
 
